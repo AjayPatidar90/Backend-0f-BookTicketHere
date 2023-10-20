@@ -31,9 +31,9 @@ const getBooking = async (req, res) => {
         
         if (data.length === 0) {
             // if no booking found this will be printed
-            return res.status(200).json({
+            return res.status(400).json({
                 message:"No previous Booking found!",
-                status:200,
+                status:400,
                 data:null
             })    
         }
