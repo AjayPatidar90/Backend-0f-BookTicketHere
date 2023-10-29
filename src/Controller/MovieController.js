@@ -1,5 +1,7 @@
 const BookingModel = require("../Schema/MoviesBookSchema.js")
 
+
+
 const storeBooking = async (req, res) => {
     try {
         const { movie, slot, seats } = req.body;
@@ -23,6 +25,12 @@ const storeBooking = async (req, res) => {
         })
     }
 }
+
+
+
+
+
+
 
 const getBooking = async (req, res) => {
     try {
