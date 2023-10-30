@@ -1,13 +1,21 @@
 
 const mongoose = require('mongoose');
+require('dotenv').config()
+
+const MongodbLive = process.env.MONGOOSE_URI;
 
 
+const port = process.env.PORT;
 
-const Database= mongoose.connect("mongodb+srv://ajaypatidar90989:@cluster0.lr0eb8u.mongodb.net/BookingDetail?retryWrites=true&w=majority").then((res)=>{
+
+ mongoose.connect(MongodbLive).then((res)=>{
     console.log("Database is connect")
 }).catch((err)=>{
     console.log(err)
 })
 
 
-module.exports = Database
+module.exports = MongodbLive
+module.exports = port
+
+
